@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        /* Body styles */
+        body {
+          font-family: Arial, sans-serif;
+          margin: 0;
+          padding: 0;
+          background-color: #f5f5f5;
+        }
+        /* Navigation bar styles */
+    nav {
+      background-color: #e1f5fe;
+      padding: 10px;
+      text-align: center;
+    }
+    
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+    }
+    
+    nav li {
+      display: inline;
+    }
+    
+    nav li a {
+      display: inline-block;
+      padding: 10px 20px;
+      text-decoration: none;
+      color: #333;
+      transition: background-color 0.3s;
+    }
+    
+    nav li a:hover {
+      background-color: #b3e5fc;
+    }
+    
+    /* Main content styles */
+    main {
+      padding: 20px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    
+    h1, h2 {
+      color: #333;
+      margin-bottom: 20px;
+    }
+    
+    p {
+      color: #555;
+      line-height: 1.5;
+      margin-bottom: 20px;
+    }
+    
+    
+    .topic-container {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          align-items: flex-start;
+        }
+    
+        .topic-card {
+          flex-basis: calc(50% - 20px);
+          margin: 10px;
+          width: 300px;
+          background-color: #fff;
+          border-radius: 4px;
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+          overflow: hidden;
+          transition: transform 0.3s;
+        }
+    
+        .topic-card:hover {
+          transform: scale(1.05);
+        }
+    
+    .topic-image {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      cursor: pointer;
+    }
+    
+    .topic-details {
+      padding: 20px;
+    }
+    
+    .topic-title {
+      margin-top: 0;
+      margin-bottom: 10px;
+      font-size: 18px;
+    }
+    
+    footer {
+      background-color: #333;
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+      font-size: 14px;
+    }
+    
+    footer p {
+      margin: 0;
+    }
+    </style>
+</head>
+
+<body>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="salesByCat.html">Sales By Cateogory</a></li>
+      <li><a href="salesvProfitvQuan.html">Sales vs Profit Analysis</a></li>
+      <li><a href="profitMarginAnal.html">Profit Margin Analysis</a></li>
+      <li><a href="proftSalesInDiffCoun.html">Profit and Sales In Different Countries</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+  </nav>
+<main>
+    <h1>About The Project</h1>
+    <p>The sales and profit visualization for Exacompta Clairefontaine showcases the performance of the renowned French stationary brand. It reveals the profitability of Clairefontaine, highlighting periods of high or low profit margins. This visualization allows stakeholders to analyze the overall sales and profit trajectory, identify peak seasons or trends, and assess the brand's financial performance over time. It provides valuable insights for decision-making, strategic planning, and identifying opportunities for optimization within the stationary market.</p>
+    <p>I hope that this website serves as a valuable resource for exploring and understanding the sales trend and profit this business. </p>
+
+    <div class="section">
+        <h2>Data Source</h2>
+        <p>The data source used for the visualization of Clairefontaine's sales and profit is a structured dataset derived from internal sales and financial records. This dataset contains detailed information such as date, sales, and profit figures, allowing for a comprehensive analysis of trends over time. <br> The data is reliable, regularly updated, and undergoes validation to ensure accuracy. It may also incorporate additional variables, such as product categories or customer segments, to provide deeper insights. This data source serves as a valuable foundation for generating meaningful insights and facilitating informed decision-making regarding Clairefontaine's sales and profit performance.</p>
+        <p>The data source: <a href="https://www.exacomptaclairefontaine.fr/en/exacompta-clairefontaine-en/">Exacompta Clairefontaine</a></p>
+    </div>
+
+    <div class="section">
+        <h2>About the Dataset</h2>
+        <p>The dataset contains 16 columns and more than 4116 rows after the prep work from tableau prep. The prep work included pivoting the columns to rows. </p>
+        <p>The dataset can be viewed by clicking on the following link: <a href="https://docs.google.com/spreadsheets/d/1wdXk6yNSWGfbPkUe0VNIsyzWfP1MGqja/edit?usp=share_link&ouid=105619315955119525370&rtpof=true&sd=true">Dataset</a></p>
+
+        <p>The dataset contains the following attributes or parameters:</p>
+        <ul>
+            <li>Order ID : unique order id of products</li>
+            <li>Order Date : date of purchase of the products</li>
+            <li>Country : country to which product is exported</li>
+            <li>Segment : either consumer, corporate or home office</li>
+            <li>Ship Mode : economy, priority or immediate</li>
+            <li>Category : furniture or office supplies</li>
+            <li>Product Name : name of the product purchased</li>
+            <li>Cost : cost to the company for the product (in dollars)</li>
+            <li>Sales : selling price to the company (in dollars)</li>
+            <li>Quantity : number of products sold</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Tableau Visualization</h2>
+        <p>To visualize and analyze the dataset, I have utilized a powerful suite of data visualization and analytics tools from Tableau. These tools include Tableau Prep, Tableau Desktop, and Tableau Public. Tableau Prep is used for data preparation and cleaning, while Tableau Desktop enables us to create interactive and insightful visualizations. The final visualizations are published and shared using Tableau Public, allowing users to explore and interact with the data online.</p>
+        <div class="visualization">
+            <div class='tableauPlaceholder' id='viz1684176102815' style='position: relative'><noscript><a href='#'><img alt='Profit and Sales Vizualization of Clairefontaine ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Sa&#47;SalesandProfitVizualizationofClairefontaine&#47;Story1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='SalesandProfitVizualizationofClairefontaine&#47;Story1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Sa&#47;SalesandProfitVizualizationofClairefontaine&#47;Story1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1684176102815');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='1016px';vizElement.style.height='991px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Who Will Be Interested in Our Visualization?</h2>
+        <p>Several stakeholders may find your visualization of Clairefontaine's sales and profit insightful and valuable. Here are some potential interested parties:</p>
+        <ol>
+            <li>Company Executives and Management: The visualization can provide executives and management with a clear overview of the company's sales and profit performance. It helps them monitor the financial health of the business, identify growth opportunities, and make strategic decisions accordingly.</li>
+            <li>Sales and Marketing Teams: Sales and marketing teams can use the visualization to analyze sales trends, identify successful product categories or customer segments, and assess the effectiveness of marketing campaigns. It helps them optimize sales strategies and target specific areas for improvement.</li>
+            <li>Financial Analysts and Investors: Financial analysts and investors are interested in understanding the financial performance of the company. Your visualization can provide them with valuable insights into revenue generation, profitability, and financial trends, helping them assess the company's financial strength and make informed investment decisions.</li>
+            <li>Supply Chain and Operations Teams: The visualization can assist supply chain and operations teams in understanding demand patterns, identifying peak seasons, and optimizing inventory management. It helps them ensure efficient production and delivery processes aligned with sales trends.</li>
+            <li>Business Development and Partnerships: The visualization can be useful for business development professionals who seek to establish partnerships, negotiate deals, or expand distribution channels. It showcases the company's sales and profit performance, demonstrating its market position and potential for collaboration.</li>
+            <li>Internal Stakeholders: Other internal stakeholders, such as employees, may be interested in understanding the company's financial performance. The visualization can foster transparency and engagement, enabling employees to see the impact of their work on the company's success.</li>
+            <p>Ultimately, anyone invested in Clairefontaine's financial performance, strategic decision-making, or collaboration opportunities could find your visualization relevant and informative.</p>
+        </ol>
+    </div>
+</main>
+</body>
+<footer>A project by PRATEEK (RA2011003010491)</footer>
+</html>
